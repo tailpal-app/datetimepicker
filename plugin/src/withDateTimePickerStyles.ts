@@ -84,7 +84,8 @@ const DATE_PICKER_STYLE_NAME = 'DatePickerDialogTheme';
 const TIME_PICKER_THEME_ATTRIBUTE = 'android:timePickerStyle';
 const TIME_PICKER_STYLE_NAME = 'TimePickerTheme';
 
-const {assignStylesValue, getAppThemeGroup} = AndroidConfig.Styles;
+const {assignStylesValue, getAppThemeLightNoActionBarGroup} =
+  AndroidConfig.Styles;
 
 const {assignColorValue} = AndroidConfig.Colors;
 
@@ -238,7 +239,7 @@ const setAndroidPickerStyles = (
 
   styles = assignStylesValue(styles, {
     add: true,
-    parent: getAppThemeGroup(),
+    parent: getAppThemeLightNoActionBarGroup(),
     name: themeAttribute,
     value: `@style/${styleName}`,
   });
