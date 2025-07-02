@@ -16,7 +16,6 @@
 @property (nonatomic, copy) RCTBubblingEventBlock onChange;
 @property (nonatomic, copy) RCTBubblingEventBlock onPickerDismiss;
 @property (nonatomic, assign) NSInteger reactMinuteInterval;
-@property (nonatomic, assign) UIControlContentHorizontalAlignment contentHorizontalAlignment;
 
 @end
 
