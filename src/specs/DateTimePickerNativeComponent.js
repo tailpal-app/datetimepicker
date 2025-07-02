@@ -36,7 +36,7 @@ type NativeProps = $ReadOnly<{|
   timeZoneName?: ?string,
   timeZoneOffsetInMinutes?: ?Double,
   enabled?: WithDefault<boolean, true>,
-  contentHorizontalAlignment?: ?number,
+  contentHorizontalAlignment?: ?Int32,
 |}>;
 
 export default (codegenNativeComponent<NativeProps>('RNDateTimePicker', {
