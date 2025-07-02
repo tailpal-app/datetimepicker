@@ -15,6 +15,7 @@
 @property (nonatomic, copy) RCTBubblingEventBlock onChange;
 @property (nonatomic, copy) RCTBubblingEventBlock onPickerDismiss;
 @property (nonatomic, assign) NSInteger reactMinuteInterval;
+@property (nonatomic, assign) UIControlContentHorizontalAlignment contentHorizontalAlignment;
 
 @end
 
@@ -23,6 +24,8 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
   if ((self = [super initWithFrame:frame])) {
+    self.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+
     #ifndef RCT_NEW_ARCH_ENABLED
       // somehow, with Fabric, the callbacks are executed here as well as in RNDateTimePickerComponentView
       // so do not register it with Fabric, to avoid potential problems
@@ -70,6 +73,11 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
     if (![self.date isEqualToDate:date]) {
         [super setDate:date animated:NO];
     }
+}
+
+- (void)setContentHorizontalAlignment:(UIControlContentHorizontalAlignment)contentHorizontalAlignment {
+  _contentHorizontalAlignment = contentHorizontalAlignment;
+  [super setContentHorizontalAlignment:contentHorizontalAlignment];
 }
 
 @end

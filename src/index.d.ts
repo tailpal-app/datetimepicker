@@ -10,6 +10,13 @@ type Design = 'default' | 'material';
 type InputMode = 'default' | 'keyboard';
 type DAY_OF_WEEK = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 
+export enum ContentHorizontalAlignment {
+  Center = 0,
+  Left = 1,
+  Right = 2,
+  Fill = 3,
+}
+
 export type Event = SyntheticEvent<
   Readonly<{
     timestamp: number;
@@ -129,6 +136,11 @@ export type IOSNativeProps = Readonly<
      * Is this picker disabled?
      */
     disabled?: boolean;
+
+    /**
+     * Sets horizontal alignment of iOS native picker
+     */
+    contentHorizontalAlignment?: ContentHorizontalAlignment | number;
   }
 >;
 

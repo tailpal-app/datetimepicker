@@ -9,4 +9,6 @@
 
 @interface RNDateTimePicker : UIDatePicker
 
+@property (nonatomic, assign) UIControlContentHorizontalAlignment contentHorizontalAlignment;
+
 @end

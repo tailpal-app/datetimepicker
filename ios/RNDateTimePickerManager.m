@@ -61,6 +61,8 @@ RCT_ENUM_CONVERTER(UIUserInterfaceStyle, (@{
 
 RCT_EXPORT_MODULE()
 
+RCT_EXPORT_VIEW_PROPERTY(contentHorizontalAlignment, NSInteger)
+
 - (instancetype)init {
   if (self = [super init]) {
     _picker = [RNDateTimePicker new];

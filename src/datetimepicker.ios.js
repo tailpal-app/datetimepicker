@@ -59,6 +59,7 @@ export default function Picker({
   display: providedDisplay = IOS_DISPLAY.default,
   // $FlowFixMe[incompatible-type]
   disabled = false,
+  contentHorizontalAlignment,
   ...other
 }: IOSNativeProps): React.Node {
   sharedPropsValidation({value, timeZoneOffsetInMinutes, timeZoneName});
@@ -112,6 +113,7 @@ export default function Picker({
       onResponderTerminationRequest={() => false}
       displayIOS={display}
       enabled={disabled !== true}
+      contentHorizontalAlignment={contentHorizontalAlignment}
     />
   );
 }
