@@ -7,6 +7,7 @@
 
 #import "RNDateTimePicker.h"
 
+#import <UIKit/UIKit.h>
 #import <React/RCTUtils.h>
 #import <React/UIView+React.h>
 
@@ -20,6 +21,8 @@
 @end
 
 @implementation RNDateTimePicker
+
+@synthesize contentHorizontalAlignment = _contentHorizontalAlignment;
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
